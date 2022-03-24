@@ -1,0 +1,244 @@
+<!-- app blade -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><!--  @yield('title') --> - Somos Todos</title>
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+   <!-- {{--  Font awesome CDN --}} -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <!-- {{-- Bootstrap CDN --}} -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- {{-- Google fonts Comforta --}} -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ffffff;">
+            <!-- {{-- <a class="navbar-brand" href="#">Navbar</a> --}} -->
+        <div class="d-flex justify-content-center" id="imageContainer">
+            <img src="assets/logo-inicio.png" id="stInitial" alt="Somos Todos logo">
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+          <ul class="navbar-nav" id="navulContainer">
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Nosotros
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Como Funciona</a>
+                    <a class="dropdown-item" href="#">Términos y condiciones</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    apóyanos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Donaciones</a>
+                    <a class="dropdown-item" href="#">Compra el libro</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Nosotros
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Contactános</a>
+                    </div>
+                </li>
+          </ul>
+        </div>
+      </nav>
+
+    <!-- @yield('content') -->
+</body>
+</html>
+<!-- fin app blade -->
+
+<!-- home blade -->
+<!-- @extends('layouts.app')
+@section('title', 'Home')
+
+
+
+
+@section('content') -->
+<section class="heroSection">
+    <div id="heroBackground">
+        <img src="assets/hero.png" id="imgBackground" alt="Hero Principal">
+    </div>
+    <div class="heroContainer">
+        <img class="" id="heroImage"  src="assets/stlogohero.png" -alt="SomosTodos logo blanco">
+    </div>
+    <div class="heroText">
+        <h1>Comparte momentos</h1>
+        <h1>haz amigos</h1>
+        <h1>lidera Proyectos</h1>
+        <h1>y deja que tus ideas cambien el mundo</h1>
+    </div>
+</section>
+
+<section class="formSignup text-center col-12 justify-content-center">
+    <h1>¡ÚNETE!</h1>
+    <div class="signupContainer d-lg-flex d-md-block d-sm-block">
+        <img class="col-lg-6 col-md-6" src="assets/world.png" alt="mundo color negro">
+        <form  id="signupForm" class="col-lg-6 col-md-12 d-block" action="">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">
+                    
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Nombre" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">
+
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Apellido" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">
+
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Correo" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="BottomtextContainer text-left">
+                <button type="button" class="btn mt-4">REGÍSTRATE</button>
+                <p class="mt-4">Para mantenerte informado <br>
+                de nuevas actualizaciones.</p>
+            </div>
+
+        </form>
+    </div>
+</section>
+
+<section class="Explanation d-block text-center">
+    <div class="network col-12 align-items-center d-lg-flex d-md-block d-sm-block">
+        <div class="networkText col-lg-6 col-md-12">
+            <p>
+                La tecnología es herencia de toda la humanidad y esta
+                debe ser el puente para un CAMBIO de modelo SOCIAL. 
+            </p>
+            <p>
+                Esta plataforma está diseñada para alcanzar prosperidad
+                social y sostenibilidad ambiental.
+            </p>
+            <p>
+                Será una red para PROPONER y CONSTRUIR, una red al
+                servicio de todos.
+            </p>
+        </div>
+
+        <div id="networkImage" class="col-6 col-lg-6 col-md-12 mx-auto">
+            <img class="mx-auto" src="assets/redes-color.png" alt="red de personas conectadas">
+        </div>
+    </div>  
+
+</section>
+
+<section class="videoSection">
+    <div id="videoBackground">
+        <img src="assets/fondo-con-redes.png" id="videoImg" alt="fondo del video azul">
+    </div>
+    <div class="videoContainer">
+        <div id="videoBorder">
+            <iframe style="max-width: 500px; border-radius: 20px;border-color: none;width: 90vw;" height="315" src="https://www.youtube.com/embed/DS2v05g7wuU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</section> 
+
+<section class="donate text-center">
+    <h1 id="weTitle" class="text-white">
+        EL MUNDO NO CAMBIA
+    </h1>
+    <h1 id="weChange">
+        <b> CAMBIAMOS NOSOTROS </b> 
+    </h1> 
+        
+    
+    <div class="donateContainer d-lg-flex d-md-flex d-sm-block">
+        <div class="bookContainer col-lg-5 col-md-5">
+            <h2 class="donateTitles">BASADO EN</h2>
+            <img src="" alt="Ni lobos ni pastores ovejas al poder">
+            <p>Obtén el libro para mayor ampliación del proyecto</p>
+        </div>
+        <div class="separatorContainer d-flex justify-content-center col-lg-1 col-md-1">
+            <span id="separator"></span>
+        </div>
+        <div class="donateContainer col-lg-5 col-md-5">
+            <h2 class="donateTitles">PROYECTO <br> EN DESAROLLO</h2>
+            <img class="w-100" src="assets/boton-donar.png" alt="Dona aquí">
+            <p>Necesitamos de tu apoyo para seguir <b>construyendo</b></p>
+        </div>
+    </div>
+
+
+</section>
+
+<footer class="footer text-start align-items-center d-lg-flex d-md-block d-sm-block">
+    
+    <div id="followUs" class="d-block  col-lg-6 col-md-12">
+        <h4 class="white-textUpper" style="padding-right: 100px;">SIGUENOS</h4>
+        <div class="brands d-flex">
+            <div class="brandsContainer">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="brandsContainer">
+                <i class="fab fa-instagram"></i>
+            </div>
+            <div class="brandsContainer">
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+
+    <div id="contactUs" class="col-lg-6 col-md-12">
+        <h4 class="white-textUpper" style="padding-right: 40px;    margin-bottom: 15px;">CONTACTÁNOS</h4>
+        <ul class="d-flex justify-content-center">
+            <i class="fa fa-envelope"></i>
+            <p class="pl-2 m-0 white-text">TODOS1234@GMAIL.COM</p>
+        </ul>
+        <ul class="mb-0 d-flex justify-content-center"  style="padding-right: 45px;">
+            <i class="fa fa-phone"></i>
+            <p class="pl-3 mb-0 white-text" style="padding-right: 30px;">(+57) 313 2790 507</p>
+        </ul>
+    </div>
+</footer> 
+<div class="mb-0 col-12 rights">
+    <img style="margin: 20px;width: 200px;" src="assets/st-blanco.png" alt="Derechos Todos">
+    <p class="mb-0">Todos los derechos reservados 2022</p>
+</div>
+
+    <!-- {{-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> --}} -->
+
+     <!-- {{-- Bootstrap CDN & Popper.js--}} -->
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     <!-- {{-- font brands --}} -->
+     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" integrity="sha384-sCI3dTBIJuqT6AwL++zH7qL8ZdKaHpxU43dDt9SyOzimtQ9eyRhkG3B7KMl6AO19" crossorigin="anonymous"></script>
+     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+<!-- @endsection -->
+
+
+<!-- fin home blade -->
