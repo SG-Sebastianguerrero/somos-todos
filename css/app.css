@@ -7,6 +7,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Comfortaa';
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
 /*     color: var(--black)!important; */
 }
 
@@ -32,12 +34,13 @@ h4 {
     padding: 20px!important; */
 }
 .navbar-collapse  {
+    z-index: 2!important;
     top: 65px!important;
     padding: 10px!important;
-    width: 102vw !important;
+    width: 100vw !important;
 }
 .navbar-toggler {
-    z-index: 2;
+    z-index: 3;
     top: 90px!important;
     position: fixed;
     background: white;
@@ -49,13 +52,13 @@ h4 {
     
  }
  .collapse{
-    top: 100px;
+    /* top: 100px; */
     background-color: #ffffff;
     position: fixed;
-    z-index: 1;
+    z-index: 2!important;
    /*  width: 100%; */
     margin: 0!important;
-        width: 101vw;
+    width: 100vw;
     padding: 20px 20px;
     left: -10px;
  }
@@ -91,11 +94,10 @@ h4 {
 #imageContainer{
     top: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     background: white; 
-    width: 101vw;
+    width: 100vw;
     left: -10px; 
-    
 }
 /*
  * Hero
@@ -115,7 +117,8 @@ h4 {
  }
 
  #imgBackground{
-    transform: scaleX(1);
+    position: fixed;
+    /* transform: scaleX(1); */
     height: 70vh;
     /* position: absolute; */
     width: 100vw;
@@ -160,9 +163,19 @@ h4 {
     outline: 0;
     box-shadow: none!important;
  }
-.formSignup, .Explanation, .donate{
+.formSignup, .Explanation, .videoSection, .donate, .footer{
     padding: 50px;
+    background: white;
+    z-index: 1;
+    position: relative;
+    width: 100vw!important;
+    margin-bottom: -1px;
 }
+
+.BottomtextContainer p{
+    text-align: center;
+}
+
 .inputText{
     width: 100%;
 }
@@ -189,6 +202,7 @@ h4 {
     font-weight: 700!important;
     border-radius: 10px!important;
     border: none!important;
+    width: 100%!important;
 }
 
 /*
@@ -202,7 +216,9 @@ h4 {
     width: 100%;
 }
 #networkImage{
-    min-width: 300px!important;
+    width: 100%;
+}
+#networkImage img{
     width: 100%;
 }
 
@@ -214,11 +230,12 @@ h4 {
     grid-template: repeat(3,1fr) / repeat(4,1fr);
     width: 100%;
     height: 100vh;
+    position: relative;
     /* display: flex; */
     justify-content: center;
     align-items: center;
     margin-bottom: -1px;
-    background-image: linear-gradient(to bottom, #ffffff, #ffffff, #ffffff, #393c43, var(--black));
+    background-image: linear-gradient(to bottom, #ffffff, #ffffff, #393c43, #393c43, var(--black));
 }
  #videoBackground{
     grid-column: 1 / 3;
@@ -233,7 +250,7 @@ h4 {
 }
 #videoImg{
     background-size: cover;
-    width: 100%;
+    width: 100vw;
     margin-bottom: 20px;
     background-repeat: no-repeat;
     transform: scaleX(-1);
@@ -250,6 +267,9 @@ h4 {
     background-image: linear-gradient(to right, var(--acuaBlue) 0%, var(--lightBlue) 100%)!important;
 }
 .videoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-column: 1 / 4;
     grid-row: 2 / 2;
     width: 100vw;
@@ -261,8 +281,6 @@ h4 {
 .donate{
     background: var(--black);
     margin: auto;
-    z-index: 0;
-    position: inherit;
 }
 .donateContainer, .bookContainer{
     margin: auto;
@@ -298,6 +316,7 @@ h4 {
 .footer{
     margin-bottom: -1px;
     background-color: var(--black);
+    z-index: 1;
 }
 .fa-facebook-f, .fa-instagram, .fa-youtube{
     color: var(--white);
@@ -346,3 +365,13 @@ h4 {
     color: var(--white);
     margin-bottom: -2px;
 }   
+
+
+@media (max-width: 700px) {
+   /*  body {
+      display: none;
+    } */
+    .heroSection{
+        margin-top: 20px;
+    }
+  }
