@@ -30,15 +30,18 @@ h4 {
  */
 
 #navbarNavDropdown{
-    /* top: 65px!important;
+    /* top: 100px!important; */
+    /* 
     padding: 20px!important; */
 }
 .navbar-collapse  {
-    z-index: 2!important;
-    top: 65px!important;
+   /*  z-index: 2!important;
+  
     padding: 10px!important;
-    width: 100vw !important;
+    width: 100vw !important; */
+    /* top: 100px!important; */
 }
+
 .navbar-toggler {
     z-index: 3;
     top: 90px!important;
@@ -51,25 +54,30 @@ h4 {
      top: 0px;
     
  }
- .collapse{
-    /* top: 100px; */
+ /* .collapse{
     background-color: #ffffff;
     position: fixed;
     z-index: 2!important;
-   /*  width: 100%; */
     margin: 0!important;
     width: 100vw;
     padding: 20px 20px;
     left: -10px;
- }
+ } */
 #stInitial{
     width: 220px!important;
     background-size: cover!important;
     background-repeat: no-repeat!important;
 }
 #navulContainer{
+    top: 80px;
     width: 100%!important;
     justify-content: space-evenly;
+    position: fixed;
+    z-index: 3;
+    left: 0px;
+    /* background: white; */
+    padding: 10px;
+    background-image: linear-gradient(white, #f0f4fb);
 }
 
 #navbarDropdownMenuLink, .dropdown-item{
@@ -79,6 +87,11 @@ h4 {
 #navbarDropdownMenuLink:hover{
     color: var(--lightBlue);
 
+}
+
+#navbarNavDropdown {
+    /* top: 100px!important; */
+    padding-top: 100px!important;
 }
 .nav-link, .dropdown-item{
     font-weight: 500!important;
@@ -96,7 +109,8 @@ h4 {
     position: fixed;
     z-index: 2;
     background: white; 
-    width: 100vw;
+    width: 103%;
+    padding: 10px;
     left: -10px; 
 }
 /*
@@ -124,6 +138,7 @@ h4 {
     width: 100vw;
     background-repeat: no-repeat;
     background-size: cover;
+    background: var(--black);
  }
  .heroContainer{
      position: relative;
@@ -239,7 +254,7 @@ h4 {
 }
  #videoBackground{
     grid-column: 1 / 3;
-    grid-row: 1 / 3 ;
+    grid-row: 1 / 4;
     position: absolute;
     width: 100%;
    /*  height: auto; */
@@ -366,12 +381,87 @@ h4 {
     margin-bottom: -2px;
 }   
 
+.rights p{
+    font-style: italic;
+    font-size: 15px;
+}
 
 @media (max-width: 700px) {
    /*  body {
       display: none;
     } */
-    .heroSection{
-        margin-top: 20px;
+    #heroImage, .heroContainer{
+        display: none!important;
     }
-  }
+    .heroText {
+        position: relative;
+        color: var(--white);
+        grid-column: 1 / 6;
+        grid-row: 2 / 2;
+        padding-right: 20px;
+        padding-left: 20px;
+        text-align: center;
+    }
+    .signupContainer img {
+        width: 50%!important;
+    }
+    #videoImg{
+        display: none;
+        /* background-size: cover;
+        width: auto;
+        margin-bottom: 20px;
+        background-repeat: no-repeat;
+        transform: scaleX(-1);
+        height: 70vh; */
+    }
+    #videoBackground{
+        grid-row: 1 / 4;
+    }
+    .videoSection{
+        background:var(--black);
+        /* background-image: linear-gradient(to right, var(--acuaBlue) 0%, var(--lightBlue) 100%)!important; */
+    }
+
+}
+
+@media (min-width: 701px) {
+    .signupContainer img {
+        width: 50%!important;
+    }
+    #networkImage img {
+        width: 40%!important;
+        padding: 20px;
+    }
+    /* #videoBackground{
+        grid-row: 1 / 3;
+    } */
+
+    .heroSection {
+        margin-top: 10px;
+    }
+}
+
+
+/* 
+
+HACER UN MEDIA QUERY PARA 1600{
+    mas pequeño el donar
+    arreglar el videobackground 
+}
+
+necesito ina imagen cuadrada para el hero porque se deforma cuando se hace mas pequeño
+en el video ponerle un titulo como video introductorio o algo asi 
+mejorar la calidad de el dona aqui 
+
+CAMBIO SOCIAL, CONSTRUIR PROPONER
+
+agregar en el html
+<div class="signupContainer d-lg-flex d-md-block d-sm-block">
+
+    <img class="col-lg-5 col-md-6" src="assets/world.png" alt="mundo color negro">
+
+
+    cambiar en nosotros en la barra de navegacion para que diga contacto
+
+    agregar en rights en el parrafo &copy;
+*/
